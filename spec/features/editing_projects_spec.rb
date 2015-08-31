@@ -15,4 +15,11 @@ feature "Editing a page" do
         
         expect(page).to have_content("Project has been successfully updated.")
     end
+    
+    scenario "Edited form should have valid name" do
+        
+        fill_in "Name", with: ""
+        click_button "Update Project"
+        expect(page).to have_content("Project was NOT successfully edited")
+    end
 end
