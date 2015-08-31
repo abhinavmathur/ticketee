@@ -33,6 +33,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 group :test do
   gem 'capybara', '~> 2.5.0'
+  gem 'factory_girl_rails'
 end
 
 group :development, :test do
