@@ -32,10 +32,10 @@ class ProjectsController < ApplicationController
 
   def update
     if @project.update(project_params)
-      flash[:notice] = "Project has been updated."
+      flash[:notice] = "Project has been successfully updated."
       redirect_to @project
     else
-      flash[:alert] = "Project has not been updated."
+      flash[:alert] = "Project was NOT successfully edited"
       render "edit"
     end
   end
